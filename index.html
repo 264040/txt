@@ -1,0 +1,141 @@
+<!DOCTYPE  html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>css盒子模型</title>
+<link rel="stylesheet" href="ys1.css" type="text/css">
+<style>
+	*{padding:0;margin:0;}
+	.box1{
+			width:590px;
+			
+			padding:20px;
+			margin:20px auto;
+            border:1px solid #8d8a8a;
+		}
+		#biaodang{
+			width:500px;
+			margin:3em 3em 0 3em;
+		}
+		#wb{
+			font-size: 10px;
+		}
+		.tou{
+			 margin-bottom:3em;
+		}
+		#xial{
+			width: 231.98px;
+			border-radius: 30px;
+		}
+		.box1 #xial{
+			height: 2em;
+		}
+		#yh{
+			background-image: url(images/用户.png);
+			background-size:20px 20px;
+			background-repeat: no-repeat;
+			padding:2px 0 2px 23px;
+			border-radius:30px;
+			background-position-x: 0.5px;
+		}		
+		#HY{
+			background-image: url(images/3232.png);
+			background-size:19px 19px;
+			background-repeat: no-repeat;
+			padding:2px 0 2px 23px;
+			border-radius:30px;
+			background-position-y: 0.5px;
+			background-position-x: 1px;			
+		}
+		#ig{
+			background-image: url(images/email.png);
+			background-size:19px 19px;
+			background-repeat: no-repeat;
+			padding:2px 0 2px 23px;
+			background-position-y: 0.5px;
+			background-position-x: 1px;
+		}
+		#dxuan input{
+			font-size:10px;
+		}
+		#tttt{
+			display: flex;	
+		}	
+		.ttt{
+			width:30PX;
+			display: inline-block;
+			align-self: center;
+			margin-right:10px;
+		}
+		#tjjjj{
+			display:block;
+			margin:30px 0 0 36px;
+			padding:1px 5px;
+		}
+		#xxxx{
+			color:brown;
+		}
+		.yh,#HY,#ig,textarea{
+			caret-color:goldenrod;/* 定义光标颜色 */
+		}
+		#id1{
+			box-sizing: border-box;
+			padding:3px ;
+		}
+		#xingm,.ttt{
+			font-weight: bold;
+		}
+</style>
+</head>
+<body>
+	<div class="box1" >
+		<div class="tou"><h1>下面就开始在线报名吧<span id="wb">(以下信息是报名传智播客的重要依据，请认真填写)</span></h1></div>
+		<form id="biaodang" name="biaodang" >
+			<span id="xingm">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</span><span id='xxxx'>*</span>&nbsp;&nbsp;<input id="yh" name="yh" type='text'  class="yh" placeholder="报名的重要依据,请认真填写" maxlength="15" size='30px'><br/><br/>
+			<span id="xingm">电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话</span><span id='xxxx'>*</span>&nbsp;&nbsp;<input id='HY' type='text' placeholder="报名的重要依据,请认真填写" maxlength="15" size='30px'><br/><br/>
+			<span id="xingm">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</span><span id='xxxx'>*</span>&nbsp;&nbsp;<input type="radio" name="sex">男
+			<input type="radio" name="sex">女<br/><br/>
+			<span id="xingm">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</span><span id='xxxx'>*</span>&nbsp;&nbsp;<input id='ig' type="text"><br><br>
+			意向课堂<span id='xxxx'>*</span>&nbsp;&nbsp;<select name="cars" id="xial">
+				<option value="volvo">一鞭左刺拳</option>
+				<option value="saab">两鞭右刺拳</option>
+				<option value="saab">三鞭左正蹬</option>
+				<option value="fiat" selected>网页平面设计UI设计就业班</option>
+				<option value="audi">松果弹抖闪电鞭</option>
+				</select><br><br>
+				<div id='dxuan'>
+			<span id="wod">了解传智渠道&nbsp;&nbsp;&nbsp;<span><input type="checkbox" name="ah">baidu
+			<input type="checkbox" name="ah">传智老学员
+			<input type="checkbox" name="ah">朋友推荐
+			<input type="checkbox" name="ah">CSDN网站
+			<input type="checkbox" name="ah">视频教程
+			<input type="checkbox" name="ah">其他
+			</div>
+			<br/>
+					
+			<!-- <input type="file" ><br/><br/> 选择文件 -->
+			<div id="tttt">
+			<div class="ttt">留言</div>
+			<textarea id="id1"  cols="65" placeholder="请描述有没有设计基础，以及为什么选择学习网页平面设计ui设计？" rows="10"></textarea><br/>
+			</div>
+			<button id="tjjjj" onclick='return chg()'>提交</button>&nbsp;
+		</form>
+	</div>
+
+	<script>
+		function chg(){
+			var Zz=document.getElementById("yh").value;
+			var igg=document.getElementById("ig").value;
+			var hy=document.getElementById("HY").value;
+			if(Zz==''||igg==''||hy==''){
+				alert("请输入")
+				
+				
+			}else{
+				alert('登陆成功');
+			}
+		}
+	</script>
+
+</body>
+</html>
